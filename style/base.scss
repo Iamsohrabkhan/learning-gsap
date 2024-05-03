@@ -1,0 +1,58 @@
+$bg-color: #000;
+$light: #fff;
+$header-height: 4rem;
+$header-font--size: 1.8rem;
+$banner-video--height: 100svh;
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+}
+html,
+body {
+  font-size: 62.5%;
+  margin: 0;
+  padding: 0;
+  background-color: $bg-color;
+  color: $light;
+  overflow-x: clip;
+}
+.container {
+  max-width: 90%;
+  margin: 0 auto;
+}
+.btn-primary {
+  background-color: $light;
+  color: $bg-color;
+  padding: 1.2rem 2.2rem;
+  font-weight: 400;
+  border: none;
+  border-radius: 3rem;
+  font-size: 1.6rem;
+  width: fit-content;
+  cursor: pointer;
+}
+
+h1 {
+  font-size: 9rem;
+}
+h2 {
+  font-size: 6rem;
+}
+h3 {
+  font-size: 4rem;
+}
+p {
+  font-size: 2rem;
+}
+
+@keyframes loop {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-50% + 1rem));
+  }
+}
