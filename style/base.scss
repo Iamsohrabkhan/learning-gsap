@@ -3,7 +3,7 @@ $light: #fff;
 $header-height: 4rem;
 $header-font--size: 1.8rem;
 $banner-video--height: 100svh;
-
+$mobile: 520px;
 * {
   margin: 0;
   padding: 0;
@@ -47,6 +47,18 @@ h3 {
 p {
   font-size: 2rem;
 }
+
+@media (max-width: $mobile) {
+  h1 {
+    font-size: 5rem;    
+  }
+}
+
+
+
+
+
+
 
 @keyframes loop {
   from {

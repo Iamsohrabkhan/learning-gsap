@@ -94,6 +94,7 @@ nav {
     margin-top: -8rem;
     overflow-x: hidden;
   }
+
   .usp {
     position: relative;
     z-index: 2;
@@ -170,7 +171,7 @@ nav {
 .marque-wrapper {
   position: relative;
   overflow-x: clip;
-  margin-top: -80px;
+  margin-top: -60px;
   .marque-inner {
     display: flex;
     flex-wrap: nowrap;
@@ -182,7 +183,7 @@ nav {
     animation: loop 15s linear infinite;
   }
   .marque-2 {
-    animation: loop 10s linear 0s infinite reverse ;
+    animation: loop 10s linear 0s infinite reverse;
   }
   img {
     border-radius: 1rem;
@@ -190,6 +191,97 @@ nav {
     aspect-ratio: 16/9;
     flex-shrink: 0;
     cursor: pointer;
+  }
+}
+
+@media (max-width: $mobile) {
+  .hero-content {
+    padding: 0rem 2rem;
+    background: pink;
+    margin-top: -10rem !important;
+    text-wrap: balance;
+    gap: 2rem;
+    justify-content: start;
+  }
+  .usp {
+    padding-left: 2rem;
+    padding-bottom: 4rem;
+    p {
+      font-size: 4rem !important;
+      margin-top: 4rem;
+      max-width: 90%;
+      sup {
+        font-size: 2rem;
+      }
+    }
+  }
+
+  .prices-cards {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 10px;
+    padding-bottom: 8rem;
+    .price-card {
+      padding: 2rem;
+      & > * {
+        margin-top: 1rem;
+      }
+      & > button {
+        margin-top: 2rem;
+      }
+      .price-sub--title {
+        font-size: 2.5rem;
+      }
+      .price-main--title {
+        font-size: 5rem;
+      }
+      .price-text {
+        font-size: 1.8rem;
+      }
+    }
+  }
+
+
+  .crousel-wrapper {
+    height: 280vh;
+    .crousel {
+      position: sticky;
+      margin-top: -100vh;
+      top: 0;
+      left: 0;
+      .sliders {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1.6rem;
+        padding: 1rem 0;
+      }
+   
+  
+      img {
+        width: 300px;
+        border-radius: 1.5rem;
+        aspect-ratio: 9/16;
+        object-fit: cover;
+      }
+    }
+  }
+
+  .marque-wrapper {
+    margin-top: -100px;
+    .marque-inner {
+      display: flex;
+      flex-wrap: nowrap;
+      padding: 1rem 0;
+      gap: 1rem;
+    }
+
+    img {
+      border-radius: 1rem;
+      width: 30rem;
+      aspect-ratio: 16/9;
+    }
   }
 }
 

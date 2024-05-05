@@ -72,18 +72,22 @@ gsap.from(".usp-content--4", {
     toggleActions: "play pause play reverse",
   },
 });
-gsap.from(".prices-cards", {
-  opacity: 0,
-  y: 80,
-  duration: 0.6,
-  scrollTrigger: {
-    trigger: ".prices-cards",
-    start: "top 70%",
-    end: "top top",
-    scrub: false,
-    toggleActions: "play pause play reverse",
-  },
-});
+
+gsap.utils.toArray(".price-card").forEach((_)=>(
+  gsap.from(_, {
+    opacity: 0,
+    y: 80,
+    duration: 0.6,
+    scrollTrigger: {
+      trigger: ".prices-cards",
+      start: "top 70%",
+      end: "top top",
+      scrub: false,
+      toggleActions: "play pause play reverse",
+    },
+  })
+))
+
 ScrollTrigger.create({
   trigger: ".slider-2",
   start: "top 100%",
