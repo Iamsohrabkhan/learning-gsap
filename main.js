@@ -1,7 +1,23 @@
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "./style/main.scss";
 import gsap from "gsap/all";
+import Lenis from 'lenis';
+
+const lenis = new Lenis()
+lenis.on('scroll', (e) => {
+  console.log(e)
+})
+
+lenis.on('scroll', ScrollTrigger.update)
+
+gsap.ticker.add((time)=>{
+  lenis.raf(time * 1000)
+})
+
+gsap.ticker.lagSmoothing(0)
 gsap.registerPlugin(ScrollTrigger);
+
+
 gsap.to(".hero-video", {
   opacity: 0,
   scrollTrigger: {

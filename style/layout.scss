@@ -81,15 +81,16 @@ nav {
     top: 0;
     left: 0;
     right: 0;
+    bottom: 0;
     width: 100%;
+    padding: 14rem 5rem;
     height: $banner-video--height;
     display: flex;
     flex-direction: column;
     justify-content: end;
     align-items: start;
     gap: 4rem;
-    padding: 12rem 6rem;
-    width: 100svw;
+    max-width: 100svw;
     height: calc(100svh - 4rem * 2);
     margin-top: -8rem;
     overflow-x: hidden;
@@ -101,10 +102,10 @@ nav {
     padding-left: 6rem;
     padding-bottom: 4rem;
     p {
-      font-size: 6rem;
+      font-size: clamp(3rem, 10vw, 6rem);
       margin-top: 4rem;
       font-weight: 600;
-      max-width: 70%;
+      max-width: clamp(95%, 10vw, 70%);
       sup {
         font-size: 2rem;
       }
@@ -196,10 +197,12 @@ nav {
 
 @media (max-width: $mobile) {
   .hero-content {
-    padding: 0rem 2rem;
-    background: pink;
     margin-top: -10rem !important;
     text-wrap: balance;
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
     gap: 2rem;
     justify-content: start;
   }
@@ -241,7 +244,6 @@ nav {
     }
   }
 
-
   .crousel-wrapper {
     height: 280vh;
     .crousel {
@@ -257,8 +259,7 @@ nav {
         gap: 1.6rem;
         padding: 1rem 0;
       }
-   
-  
+
       img {
         width: 300px;
         border-radius: 1.5rem;
@@ -269,7 +270,7 @@ nav {
   }
 
   .marque-wrapper {
-    margin-top: -100px;
+    margin-top: -30px;
     .marque-inner {
       display: flex;
       flex-wrap: nowrap;
